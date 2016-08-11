@@ -1,0 +1,31 @@
+{
+  "name": "Tags Grabber",
+  "version": "1.0",
+  "description": "Grabb tags on web page.",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action" :
+  {
+    "default_icon" : "icon-19.png",
+    "default_title" : "Grab tags on page"
+  },
+  "permissions" : [
+    "declarativeContent",
+    "tabs",
+    "activeTab",
+    "downloads"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://dribbble.com/*"],
+      "js": ["ntc.js"]
+    }
+  ],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "manifest_version": 2
+}
